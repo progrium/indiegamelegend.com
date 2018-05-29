@@ -49,6 +49,9 @@
       color: white;
       
     }
+    #factsheet a:link, a:visited {
+      color: #00b7f1;
+    }
     #hero a:link, #hero a:visited, #hero a:active {
       color: white;
       font-size: 2.5em;
@@ -64,7 +67,7 @@
       margin-left: auto;
       margin-right: auto;
     }
-    iframe {
+    iframe.trailer {
       margin-bottom: 100px;
       width: 50%;
       display: block;
@@ -116,6 +119,7 @@
           <a href="#" class="item">Home</a>
           <a href="#trailer" class="item">Trailer</a>
           <a href="#subscribe" class="item">Subscribe</a>
+          <a href="#devlog" class="item">Devlog</a>
           <a href="#press" class="item">Press</a>
         </div>
       </div>
@@ -134,7 +138,7 @@
   </div>
   
   <div class="videoWrapper" id="trailer">
-    <iframe width="1000" height="562" src="https://www.youtube.com/embed/VlGIQqdQepA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe class="trailer" width="1000" height="562" src="https://www.youtube.com/embed/VlGIQqdQepA?rel=0&controls=0&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
   
   <div class="ui vertical segment container" id="subscribe">
@@ -169,12 +173,18 @@
     <!--End mc_embed_signup-->
   </div>
   
+  <div class="ui vertical segment" id="devlog" style="background-color:#0072be; padding-top: 80px;">
+    <div class="ui text container section">
+      <h2 style="text-align: center;">Devlog Series</h2>
+      <iframe width="700" height="394" src="https://www.youtube.com/embed/videoseries?list=PLw1XoTpvjkthw3yKkVEZzyuoFuIlHA06C&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
   
   <div class="ui vertical segment" id="press">
     <div class="ui equal width stackable grid">
-      <div class="column" style="padding:0;"><img class="ui fluid image" src="/static/screens/screen1.png" /></div>
-      <div class="column" style="padding:0;"><img class="ui fluid image" src="/static/screens/screen2.png" /></div>
-      <div class="column" style="padding:0;"><img class="ui fluid image" src="/static/screens/screen3.png" /></div>
+      <div class="column" style="padding:0;"><a href="/static/screens/screen1.png"><img class="ui fluid image" src="/static/screens/screen1.png" /></a></div>
+      <div class="column" style="padding:0;"><a href="/static/screens/screen2.png"><img class="ui fluid image" src="/static/screens/screen2.png" /></a></div>
+      <div class="column" style="padding:0;"><a href="/static/screens/screen3.png"><img class="ui fluid image" src="/static/screens/screen3.png" /></a></div>
     </div>
   </div>
   
@@ -203,6 +213,10 @@
         TBD, under $10
       </div>
       <div class="ten wide column">
+        <h2>Press Releases</h2>
+        <ul>
+          <li><a href="/press/announce.html">May 30, 2018 - Announcement</a></li>
+        </ul>
         <h2>Description</h2>
         <p>Independent game developers from around the world have been kidnapped and it's up to you to rescue them. Blast your way through
           nine unique areas filled with enemies, traps, and puzzles. Take down unrelenting bosses, discover upgrades and secrets,
