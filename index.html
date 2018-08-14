@@ -17,8 +17,11 @@
       color: white;
       font-family: 'Press Start 2P', monospace;
     }
-    h1, h2, h3, h4, p {
-      font-family: 'Press Start 2P', monospace;
+    h1, h2, h3, h4, p, a.button {
+      font-family: 'Press Start 2P', monospace !important;
+    }
+    #hero a.button {
+      font-size: 2em !important;
     }
     #factsheet, #factsheet p {
       font-family: 'Roboto Mono', monospace;
@@ -127,12 +130,14 @@
     
     <div id="hero" class="ui container">
       <img id="logo" class="pixelated" src="./static/title.png" />
-      <h2>Coming soon</h2>
+      <a href="http://progrium.itch.io/tigl3d-alpha" style="margin-bottom: 40px;" class="ui primary large button">Play the Alpha Demo</a>
+      <br />
       <a href="https://store.steampowered.com/app/844440/The_Indie_Game_Legend_3D/"><i class="steam icon"></i></a>
       <a href="https://twitter.com/tigl3d"><i class="twitter icon"></i></a>
       <a href="https://www.facebook.com/tigl3d"><i class="facebook icon"></i></a>
       <a href="https://www.youtube.com/channel/UCoej7Lrz8ugDp1ZHmYyjOsg"><i class="youtube icon"></i></a>
       <a href="https://discord.gg/cJzy2xS"><i class="discord icon"></i></a>
+
     </div>
     
   </div>
