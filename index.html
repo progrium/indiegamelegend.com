@@ -1,337 +1,569 @@
 <html>
-<head>
-  <title>The Indie Game Legend 3D</title>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono" rel="stylesheet">
-  <style type="text/css">
-    body {
-      background-color: #000;
-      /*background-image: url(./static/starbg.gif);
+  <head>
+    <title>The Indie Game Legend 3D</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        background-color: #000;
+        /*background-image: url(./static/starbg.gif);
       background-repeat: repeat;
       background-size: 60%;*/
-      margin: 0px;
-      color: white;
-      font-family: 'Press Start 2P', monospace;
-    }
-    h1, h2, h3, h4, p, a.button {
-      font-family: 'Press Start 2P', monospace !important;
-    }
-    #hero a.button {
-      font-size: 2em !important;
-    }
-    #factsheet, #factsheet p {
-      font-family: 'Roboto Mono', monospace;
-      margin-bottom: 20px;
-    }
-    p {
-      margin-bottom: 40px;
-    }
-    @font-face {
-      font-family: 'editundo';
-      src: url('/static/fonts/editundo.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      
-    }
-    #hero {
-      margin-top: 120px;
-      margin-bottom: 180px;
-      text-shadow:
-      -2px -2px 0 #000,  
-      2px -2px 0 #000,
-      -2px 2px 0 #000,
-      2px 2px 0 #000;
-    }
-    #hero h2 {
-      font-family: "editundo";
-      font-size: 4em;
-      color: white;
-      
-    }
-    #factsheet a:link, a:visited {
-      color: #00b7f1;
-    }
-    #hero a:link, #hero a:visited, #hero a:active {
-      color: white;
-      font-size: 2.5em;
-    }
-    #hero a:hover {
-      color: #ffcf3f;
-      font-size: 2.5em;
-    }
-    #logo {
-      margin-bottom: 40px;
-      width: 80%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    iframe.trailer {
-      margin-bottom: 100px;
-      width: 50%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .pixelated {
-      image-rendering: pixelated; // Chrome 41+ and Opera 26+
-    }
-    .parallax-window {
-      min-height: 600px;
-      background: transparent;
-    }
-    .menu {
-      height: 50px;
-      
-    }
-    .menu .item {
-      font-family: 'Press Start 2P', monospace;
-      background-color: black !important;
-    }
-    .videoWrapper {
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
-      padding-top: 25px;
-      height: 0;
-    }
-    .videoWrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .section {
-      padding-bottom: 100px !important;
-    }
-  </style>
-  <link rel="icon"
-  type="image/png"
-  href="./static/icon.png">
-</head>
-<body>  
-  <div class="ui inverted vertical masthead center aligned segment pixelated jarallax parallax-window" data-jarallax data-speed="1.5" data-img-size="70%" data-img-repeat="repeat" style="background-image: url('./static/starbg.gif');">
-    
-    <div class="ui container">
-      <div class="ui large secondary inverted right menu">
-        <div class="right item">
-          <a href="#" class="item">Home</a>
-          <a href="#trailer" class="item">Trailer</a>
-          <a href="#subscribe" class="item">Subscribe</a>
-          <a href="#devlog" class="item">Devlog</a>
-          <a href="#press" class="item">Press</a>
-        </div>
-      </div>
-    </div>
-    
-    <div id="hero" class="ui container">
-      <img id="logo" class="pixelated" src="./static/title.png" />
-      <a href="https://store.steampowered.com/app/844440/The_Indie_Game_Legend_3D/" style="margin-bottom: 40px;" class="ui primary large button">Early Access Now on Steam</a>
-      <br />
-      <a href="https://store.steampowered.com/app/844440/The_Indie_Game_Legend_3D/"><i class="steam icon"></i></a>
-      <a href="https://twitter.com/tigl3d"><i class="twitter icon"></i></a>
-      <a href="https://www.facebook.com/tigl3d"><i class="facebook icon"></i></a>
-      <a href="https://www.youtube.com/channel/UCoej7Lrz8ugDp1ZHmYyjOsg"><i class="youtube icon"></i></a>
-      <a href="https://discord.gg/cJzy2xS"><i class="discord icon"></i></a>
-
-    </div>
-    
-  </div>
-  
-  <div class="videoWrapper" id="trailer">
-    <iframe class="trailer" width="1000" height="562" src="https://www.youtube.com/embed/ZwUG6nQIK84?rel=0&controls=0&showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
-  
-  <div class="ui vertical segment container" id="subscribe">
-    <h1 style="font-size: 3em; text-align: center; padding-top: 100px !important; padding-bottom: 50px;">An NES inspired<br /> shooter-vania!</h1>
-  </div>
-  
-  <div class="ui vertical segment text container section">
-    
-    <p>Independent game developers from around the world have been kidnapped and it's up to you to save them.</p>
-    <p>Explore nine thematically diverse sectors filled with enemies, traps, and puzzles.</p>
-    <p>Blast your way to the end, taking down unrelenting bosses, and rescuing captive indies.</p>
-    <p>Sign up to stay updated on the game:</p>
-    <!-- Begin MailChimp Signup Form -->
-    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-      #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-      #mc-embedded-subscribe{background-color:#0072be !important;}
-      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        margin: 0px;
+        color: white;
+        font-family: 'Press Start 2P', monospace;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      a.button {
+        font-family: 'Press Start 2P', monospace !important;
+      }
+      #hero a.button {
+        font-size: 2em !important;
+      }
+      #factsheet,
+      #factsheet p {
+        font-family: 'Roboto Mono', monospace;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 40px;
+      }
+      @font-face {
+        font-family: 'editundo';
+        src: url('/static/fonts/editundo.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      #hero {
+        margin-top: 120px;
+        margin-bottom: 180px;
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+          2px 2px 0 #000;
+      }
+      #hero h2 {
+        font-family: 'editundo';
+        font-size: 4em;
+        color: white;
+      }
+      #factsheet a:link,
+      a:visited {
+        color: #00b7f1;
+      }
+      #hero a:link,
+      #hero a:visited,
+      #hero a:active {
+        color: white;
+        font-size: 2.5em;
+      }
+      #hero a:hover {
+        color: #ffcf3f;
+        font-size: 2.5em;
+      }
+      #logo {
+        margin-bottom: 40px;
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      iframe.trailer {
+        margin-bottom: 100px;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .pixelated {
+        image-rendering: pixelated; /* Chrome 41+ and Opera 26+ */
+      }
+      .parallax-window {
+        min-height: 600px;
+        background: transparent;
+      }
+      .menu {
+        height: 50px;
+      }
+      .menu .item {
+        font-family: 'Press Start 2P', monospace;
+        background-color: black !important;
+      }
+      .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+      }
+      .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .section {
+        padding-bottom: 100px !important;
+      }
     </style>
-    <div id="mc_embed_signup">
-      <form action="https://progrium.us13.list-manage.com/subscribe/post?u=0dda02db0663c0132866c08ae&amp;id=ce897f0248" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0dda02db0663c0132866c08ae_ce897f0248" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <link rel="icon" type="image/png" href="./static/icon.png" />
+  </head>
+  <body>
+    <div
+      class="ui inverted vertical masthead center aligned segment pixelated jarallax parallax-window"
+      data-jarallax
+      data-speed="1.5"
+      data-img-size="70%"
+      data-img-repeat="repeat"
+      style="background-image: url('./static/starbg.gif');"
+    >
+      <div class="ui container">
+        <div class="ui large secondary inverted right menu">
+          <div class="right item">
+            <a href="#" class="item">Home</a>
+            <a href="#trailer" class="item">Trailer</a>
+            <a href="#subscribe" class="item">Subscribe</a>
+            <a href="#devlog" class="item">Devlog</a>
+            <a href="#press" class="item">Press</a>
+          </div>
         </div>
-      </form>
-    </div>
-    
-    <!--End mc_embed_signup-->
-  </div>
-  
-  <div class="ui vertical segment" id="devlog" style="background-color:#0072be; padding-top: 80px;">
-    <div class="ui text container section">
-      <h2 style="text-align: center;">Devlog Series</h2>
-      <iframe width="700" height="394" src="https://www.youtube.com/embed/videoseries?list=PLw1XoTpvjkthw3yKkVEZzyuoFuIlHA06C&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-  </div>
-  
-  <div class="ui vertical segment" id="press">
-    <div class="ui equal width stackable grid">
-      <div class="row" style="padding:0;">
-          <div class="column" style="padding:0;"><a href="/static/screens-beta/screenshot1.png"><img class="ui fluid image" src="/static/screens-beta/screenshot1.png" /></a></div>
-          <div class="column" style="padding:0;"><a href="/static/screens-beta/gifs/Clip2.gif"><img class="ui fluid image" src="/static/screens-beta/gifs/Clip2.gif" /></a></div>
-          <div class="column" style="padding:0;"><a href="/static/screens-beta/screenshot2.png"><img class="ui fluid image" src="/static/screens-beta/screenshot2.png" /></a></div>
-          <div class="column" style="padding:0;"><a href="/static/screens-beta/screenshot4.png"><img class="ui fluid image" src="/static/screens-beta/screenshot4.png" /></a></div>
       </div>
-      <div class="row" style="padding:0;">
-          <div class="column" style="padding:0;"><a href="/static/screens-beta/gifs/Clip10.gif"><img class="ui fluid image" src="/static/screens-beta/gifs/Clip10.gif" /></a></div>
-          <div class="column" style="padding:0;"><a href="/static/screens-beta/screenshot6.png"><img class="ui fluid image" src="/static/screens-beta/screenshot6.png" /></a></div>
-          <div class="column" style="padding:0;"><a href="/static/screens-beta/gifs/Clip16-2.gif"><img class="ui fluid image" src="/static/screens-beta/gifs/Clip16-2.gif" /></a></div>
-          <div class="column" style="padding:0;"><a href="/static/screens-beta/screenshot5.png"><img class="ui fluid image" src="/static/screens-beta/screenshot5.png" /></a></div>
-      </div>
-    </div>
-  </div>
-  
-  
-  <div id="factsheet" class="ui vertical segment container section" style="padding-top: 100px;">
-    <div class="ui grid">
-      <div class="two wide column"></div>
-      <div class="three wide column">
-        <h4>Developers</h4>
-        Phubansoft<br />
-        Progrium Games
-        <h4>Release Date</h4>
-        June 27th, 2019
-        <h4>Press Contact</h4>
-        <a href="mailto:dana@spokeandwheelstrategy.com">Dana Trebella</a>
-        <h4>Social</h4>
-        <a href="http://twitter.com/tigl3d">Twitter</a><br />
-        <a href="http://facebook.com/tigl3d">Facebook</a><br />
-        <a href="http://youtube.com/c/progrium">YouTube</a>
-        <h4>Platforms</h4>
-        Windows<br />
-        Mac OS
-        <h4>Website</h4>
-        <a href="http://tigl3d.com">tigl3d.com</a>
-        <h4>Price</h4>
-        $8.99
-      </div>
-      <div class="ten wide column">
-        <h2>Press Releases</h2>
-        <ul>
-          <li><a href="/press/beta.html">December 11, 2018 - Early Access</a></li>
-          <li><a href="/press/alpha.html">August 3, 2018 - Alpha Demo</a></li>
-          <li><a href="/press/announce.html">May 30, 2018 - Announcement</a></li>
-        </ul>
-        <h2>Description</h2>
-        <p>
-          Independent game developers have gone missing and your only lead on their whereabouts is a distress signal from a remote alien base. It's up to you to infiltrate this hostile labyrinth and uncover the answers you need to rescue them. Explore five diverse biomes while surviving dangerous hazards and obstacles, solving clever puzzles, and taking down ruthless and relentless enemies. The lives of these indies, and the future of independent games, depends on it.</p>
-        <p>
-          Immerse yourself in this nostalgic, colorful, and quirky handcrafted FPS as you uncover the secrets and lore of a retro world that blurs the line between game and reality. In the process, enter the storied and autobiographical psyche of an independent game developer facing their inner demons while battling the challenges of making games for the love of the medium.
-        </p>
-        <p>
-          Inspired by the NES cult hit The Guardian Legend and other classic titles, The Indie Game Legend 3D provides a fresh lens to what a classic 8-bit game might look like through the eyes of the player character.
-        </p>
-        <p>
-          Your mission, critical to the future of indie games, will become The Indie Game Legend.
-        </p>
-        
-        <h2>History</h2>
-        <p>
-            In 2011, Paul Hubans an active figure on TIGSource, released a freeware game as Phubansoft on the TIGSource forums, called The Indie Game Legend. The Indie Game Legend was inspired by a desire to make a bite-sized, easily digestible game that provided an outlet for his insecurities and struggles with jealousy and success as a game developer. As the game progressed, it became a way to connect with friends on the forum including a myriad of notable game development figures and inside jokes among friends. The game was well received but shortly thereafter fell into obscurity. 
-        </p>
-        <p>
-            Six years later, Jeff Lindsay, a friend of Paul’s, began experimenting with assets from The Indie Game Legend to see what it would be like from a first-person perspective. Paul was excited by this new take on the game, and the two decided to team up to collaborate on a larger-scale release. 
-        </p>
-        <p>
-            Joined by Stevie Hryciw, who did the original music, they worked to double the number of diverse areas in the game, and shifted the gameplay to first-person, which allowed for a feeling of being literally immersed into a retro gameplay experience dreamed of from their childhood.
-        </p>
-        <p>
-            Wanting to keep the game light-hearted and quirky, they evolved the narrative of the game to serve as a love letter to the indie game dev community, but also touch on Paul's challenges and experiences as a young indie game developer.
-        </p>
-        <h2>Features</h2>
-        <ul>
-          <li>Over 250 handcrafted rooms across 10 distinctly themed areas</li>
-          <li>Solve puzzles and avoid traps in a non-linear sci-fi world</li>
-          <li>Blast hordes of enemies and take down unrelenting bosses</li>
-          <li>Discover weapons, equipment, and upgrades in hidden shops</li>
-          <li>Rescue some of your favorite iconic indie game developers</li>
-          <li>Retro pixel art style in a low-poly, full 3D world</li>
-          <li>Unlockable secrets, surprises, easter eggs, and more!</li>
-          <li>Original chiptunes soundtrack by a guy named Stevie</li>
-          <li>Nearly 8 hours of classic action adventure play</li>
-          <li>Your commander is a hairless guinea pig</li>
-        </ul>
-        
-        <h2>Additional Links</h2>
-        <a href="https://phubans.itch.io/tigl">Original game</a>
-        <br />
-        <a href="https://hryx.bandcamp.com/album/tiglost-the-indie-game-legend-soundtrack">Original game OST</a>
-        
-        <h2>About Progrium Games</h2>
-        <p>
-          Jeff Lindsay was a hobbyist game developer from an early age. After high school he started running TIGSource with Derek Yu
-          and put up what is now the largest online forum for the indie game scene. Professionally, he made an impact in the web
-          and systems software fields, working at NASA and Twilio, and independently helped bring Docker, webhooks, and a number
-          of other influential tools into the world. Other than occasional prototypes, Jeff became fairly inactive in games.
-        </p>
-        <p>
-          After a decade working in tech, Jeff came back to indie games. His first freeware release was Visitor Center in 2017, a love
-          letter to the 1993 SNES Jurassic Park game. Looking for a bigger challenge next, he took on The Indie Game Legend 3D in
-          collaboration with Paul Hubans as his first commercial game project.
-        </p>
 
-        <h2>About Phubansoft</h2>
-        <p>
-          For most of his life, Paul Hubans has been designing games. He started with NES-inspired drawings of his
-          game ideas in the late 80s. By highschool he was hacking NES ROMs using tile editing tools and HEX editors. In the early 2000s, Paul started
-          making his own fully playable games in Game Maker. The most notable of these was his horror top-down multiplayer shooter, MADHOUSE.
-        </p>
-        <p>
-          In the mid 2000s, Paul worked for SEGA of America doing QA on titles like Full Auto and Shadow the Hedgehog. He went on to
-          work at 2D Boy as a production associate on their indie smash hit, World of Goo. Paul's experience with 8-bit pixel art
-          that dated back to highschool landed him a job as background artist on Capcom's 2011 DSI title, Dark Void Zero. 2011 was
-          also the year that Paul made and released the original 2D version of The Indie Game Legend. Two years later he released
-          Spunk &amp; Moxie, a one-button masocore platformer on mobile. Today, he is working on Mossmouth's UFO 50 project and The
-          Indie Game Legend 3D.
-        </p>
-        
-        <h2>Team</h2>
-        Jeff Lindsay, programmer and producer
-        <br /> Paul Hubans, designer and artist
-        <br /> Stevie Hryciw, music
+      <div id="hero" class="ui container">
+        <img id="logo" class="pixelated" src="./static/title.png" />
+        <a
+          href="https://store.steampowered.com/app/844440/The_Indie_Game_Legend_3D/"
+          style="margin-bottom: 40px;"
+          class="ui primary large button"
+          >Early Access Now on Steam</a
+        >
+        <br />
+        <a
+          href="https://store.steampowered.com/app/844440/The_Indie_Game_Legend_3D/"
+          ><i class="steam icon"></i
+        ></a>
+        <a href="https://twitter.com/tigl3d"><i class="twitter icon"></i></a>
+        <a href="https://www.facebook.com/tigl3d"
+          ><i class="facebook icon"></i
+        ></a>
+        <a href="https://www.youtube.com/channel/UCoej7Lrz8ugDp1ZHmYyjOsg"
+          ><i class="youtube icon"></i
+        ></a>
+        <a href="https://discord.gg/cJzy2xS"><i class="discord icon"></i></a>
+      </div>
+    </div>
+
+    <div class="videoWrapper" id="trailer">
+      <iframe
+        class="trailer"
+        width="1000"
+        height="562"
+        src="https://www.youtube.com/embed/ZwUG6nQIK84?rel=0&controls=0&showinfo=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="ui vertical segment container" id="subscribe">
+      <h1
+        style="font-size: 3em; text-align: center; padding-top: 100px !important; padding-bottom: 50px;"
+      >
+        An NES inspired<br />
+        shooter-vania!
+      </h1>
+    </div>
+
+    <div class="ui vertical segment text container section">
+      <p>
+        Independent game developers from around the world have been kidnapped
+        and it's up to you to save them.
+      </p>
+      <p>
+        Explore nine thematically diverse sectors filled with enemies, traps,
+        and puzzles.
+      </p>
+      <p>
+        Blast your way to the end, taking down unrelenting bosses, and rescuing
+        captive indies.
+      </p>
+      <p>Sign up to stay updated on the game:</p>
+      <!-- Begin MailChimp Signup Form -->
+      <link
+        href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <style type="text/css">
+        #mc_embed_signup {
+          clear: left;
+          font: 14px Helvetica, Arial, sans-serif;
+          width: 100%;
+        }
+        #mc-embedded-subscribe {
+          background-color: #0072be !important;
+        }
+        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+      </style>
+      <div id="mc_embed_signup">
+        <form
+          action="https://progrium.us13.list-manage.com/subscribe/post?u=0dda02db0663c0132866c08ae&amp;id=ce897f0248"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_blank"
+          novalidate
+        >
+          <div id="mc_embed_signup_scroll">
+            <input
+              type="email"
+              value=""
+              name="EMAIL"
+              class="email"
+              id="mce-EMAIL"
+              placeholder="email address"
+              required
+            />
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input
+                type="text"
+                name="b_0dda02db0663c0132866c08ae_ce897f0248"
+                tabindex="-1"
+                value=""
+              />
+            </div>
+            <div class="clear">
+              <input
+                type="submit"
+                value="Subscribe"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="button"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!--End mc_embed_signup-->
+    </div>
+
+    <div
+      class="ui vertical segment"
+      id="devlog"
+      style="background-color:#0072be; padding-top: 80px;"
+    >
+      <div class="ui text container section">
+        <h2 style="text-align: center;">Devlog Series</h2>
+        <iframe
+          width="700"
+          height="394"
+          src="https://www.youtube.com/embed/videoseries?list=PLw1XoTpvjkthw3yKkVEZzyuoFuIlHA06C&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="ui vertical segment" id="press">
+      <div class="ui equal width stackable grid">
+        <div class="row" style="padding:0;">
+          <div class="column" style="padding:0;">
+            <a href="/static/screens-beta/screenshot1.png">
+              <img
+                class="ui fluid image"
+                src="/static/screens-beta/screenshot1.png"
+              />
+            </a>
+          </div>
+          <div class="column" style="padding:0;">
+            <a href="/static/screens-beta/gifs/Clip2.gif">
+              <video
+                class="ui fluid image"
+                src="/static/screens-beta/gifs/Clip2.webm"
+                type="video/webm"
+                autoplay
+                loop
+                muted
+                playsinline
+                inline
+              ></video>
+            </a>
+          </div>
+          <div class="column" style="padding:0;">
+            <a href="/static/screens-beta/screenshot2.png">
+              <img
+                class="ui fluid image"
+                src="/static/screens-beta/screenshot2.png"
+              />
+            </a>
+          </div>
+          <div class="column" style="padding:0;">
+            <a href="/static/screens-beta/screenshot4.png">
+              <img
+                class="ui fluid image"
+                src="/static/screens-beta/screenshot4.png"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="row" style="padding:0;">
+          <div class="column" style="padding:0;">
+            <a href="/static/screens-beta/gifs/Clip10.gif">
+              <video
+                class="ui fluid image"
+                src="/static/screens-beta/gifs/Clip10.webm"
+                type="video/webm"
+                autoplay
+                loop
+                muted
+                playsinline
+                inline
+              ></video>
+            </a>
+          </div>
+          <div class="column" style="padding:0;">
+            <a href="/static/screens-beta/screenshot6.png">
+              <img
+                class="ui fluid image"
+                src="/static/screens-beta/screenshot6.png"
+              />
+            </a>
+          </div>
+          <div class="column" style="padding:0;">
+            <a href="/static/screens-beta/gifs/Clip16-2.gif">
+              <video
+                class="ui fluid image"
+                src="/static/screens-beta/gifs/Clip16-2.webm"
+                type="video/webm"
+                autoplay
+                loop
+                muted
+                playsinline
+                inline
+              ></video>
+            </a>
+          </div>
+          <div class="column" style="padding:0;">
+            <a href="/static/screens-beta/screenshot5.png">
+              <img
+                class="ui fluid image"
+                src="/static/screens-beta/screenshot5.png"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    
-    
-    
-    
+
+    <div
+      id="factsheet"
+      class="ui vertical segment container section"
+      style="padding-top: 100px;"
+    >
+      <div class="ui grid">
+        <div class="two wide column"></div>
+        <div class="three wide column">
+          <h4>Developers</h4>
+          Phubansoft<br />
+          Progrium Games
+          <h4>Release Date</h4>
+          June 27th, 2019
+          <h4>Press Contact</h4>
+          <a href="mailto:dana@spokeandwheelstrategy.com">Dana Trebella</a>
+          <h4>Social</h4>
+          <a href="http://twitter.com/tigl3d">Twitter</a><br />
+          <a href="http://facebook.com/tigl3d">Facebook</a><br />
+          <a href="http://youtube.com/c/progrium">YouTube</a>
+          <h4>Platforms</h4>
+          Windows<br />
+          Mac OS
+          <h4>Website</h4>
+          <a href="http://tigl3d.com">tigl3d.com</a>
+          <h4>Price</h4>
+          $8.99
+        </div>
+        <div class="ten wide column">
+          <h2>Press Releases</h2>
+          <ul>
+            <li>
+              <a href="/press/beta.html">December 11, 2018 - Early Access</a>
+            </li>
+            <li><a href="/press/alpha.html">August 3, 2018 - Alpha Demo</a></li>
+            <li>
+              <a href="/press/announce.html">May 30, 2018 - Announcement</a>
+            </li>
+          </ul>
+          <h2>Description</h2>
+          <p>
+            Independent game developers have gone missing and your only lead on
+            their whereabouts is a distress signal from a remote alien base.
+            It's up to you to infiltrate this hostile labyrinth and uncover the
+            answers you need to rescue them. Explore five diverse biomes while
+            surviving dangerous hazards and obstacles, solving clever puzzles,
+            and taking down ruthless and relentless enemies. The lives of these
+            indies, and the future of independent games, depends on it.
+          </p>
+          <p>
+            Immerse yourself in this nostalgic, colorful, and quirky handcrafted
+            FPS as you uncover the secrets and lore of a retro world that blurs
+            the line between game and reality. In the process, enter the storied
+            and autobiographical psyche of an independent game developer facing
+            their inner demons while battling the challenges of making games for
+            the love of the medium.
+          </p>
+          <p>
+            Inspired by the NES cult hit The Guardian Legend and other classic
+            titles, The Indie Game Legend 3D provides a fresh lens to what a
+            classic 8-bit game might look like through the eyes of the player
+            character.
+          </p>
+          <p>
+            Your mission, critical to the future of indie games, will become The
+            Indie Game Legend.
+          </p>
+
+          <h2>History</h2>
+          <p>
+            In 2011, Paul Hubans an active figure on TIGSource, released a
+            freeware game as Phubansoft on the TIGSource forums, called The
+            Indie Game Legend. The Indie Game Legend was inspired by a desire to
+            make a bite-sized, easily digestible game that provided an outlet
+            for his insecurities and struggles with jealousy and success as a
+            game developer. As the game progressed, it became a way to connect
+            with friends on the forum including a myriad of notable game
+            development figures and inside jokes among friends. The game was
+            well received but shortly thereafter fell into obscurity.
+          </p>
+          <p>
+            Six years later, Jeff Lindsay, a friend of Paul’s, began
+            experimenting with assets from The Indie Game Legend to see what it
+            would be like from a first-person perspective. Paul was excited by
+            this new take on the game, and the two decided to team up to
+            collaborate on a larger-scale release.
+          </p>
+          <p>
+            Joined by Stevie Hryciw, who did the original music, they worked to
+            double the number of diverse areas in the game, and shifted the
+            gameplay to first-person, which allowed for a feeling of being
+            literally immersed into a retro gameplay experience dreamed of from
+            their childhood.
+          </p>
+          <p>
+            Wanting to keep the game light-hearted and quirky, they evolved the
+            narrative of the game to serve as a love letter to the indie game
+            dev community, but also touch on Paul's challenges and experiences
+            as a young indie game developer.
+          </p>
+          <h2>Features</h2>
+          <ul>
+            <li>
+              Over 250 handcrafted rooms across 10 distinctly themed areas
+            </li>
+            <li>Solve puzzles and avoid traps in a non-linear sci-fi world</li>
+            <li>Blast hordes of enemies and take down unrelenting bosses</li>
+            <li>Discover weapons, equipment, and upgrades in hidden shops</li>
+            <li>Rescue some of your favorite iconic indie game developers</li>
+            <li>Retro pixel art style in a low-poly, full 3D world</li>
+            <li>Unlockable secrets, surprises, easter eggs, and more!</li>
+            <li>Original chiptunes soundtrack by a guy named Stevie</li>
+            <li>Nearly 8 hours of classic action adventure play</li>
+            <li>Your commander is a hairless guinea pig</li>
+          </ul>
+
+          <h2>Additional Links</h2>
+          <a href="https://phubans.itch.io/tigl">Original game</a>
+          <br />
+          <a
+            href="https://hryx.bandcamp.com/album/tiglost-the-indie-game-legend-soundtrack"
+            >Original game OST</a
+          >
+
+          <h2>About Progrium Games</h2>
+          <p>
+            Jeff Lindsay was a hobbyist game developer from an early age. After
+            high school he started running TIGSource with Derek Yu and put up
+            what is now the largest online forum for the indie game scene.
+            Professionally, he made an impact in the web and systems software
+            fields, working at NASA and Twilio, and independently helped bring
+            Docker, webhooks, and a number of other influential tools into the
+            world. Other than occasional prototypes, Jeff became fairly inactive
+            in games.
+          </p>
+          <p>
+            After a decade working in tech, Jeff came back to indie games. His
+            first freeware release was Visitor Center in 2017, a love letter to
+            the 1993 SNES Jurassic Park game. Looking for a bigger challenge
+            next, he took on The Indie Game Legend 3D in collaboration with Paul
+            Hubans as his first commercial game project.
+          </p>
+
+          <h2>About Phubansoft</h2>
+          <p>
+            For most of his life, Paul Hubans has been designing games. He
+            started with NES-inspired drawings of his game ideas in the late
+            80s. By highschool he was hacking NES ROMs using tile editing tools
+            and HEX editors. In the early 2000s, Paul started making his own
+            fully playable games in Game Maker. The most notable of these was
+            his horror top-down multiplayer shooter, MADHOUSE.
+          </p>
+          <p>
+            In the mid 2000s, Paul worked for SEGA of America doing QA on titles
+            like Full Auto and Shadow the Hedgehog. He went on to work at 2D Boy
+            as a production associate on their indie smash hit, World of Goo.
+            Paul's experience with 8-bit pixel art that dated back to highschool
+            landed him a job as background artist on Capcom's 2011 DSI title,
+            Dark Void Zero. 2011 was also the year that Paul made and released
+            the original 2D version of The Indie Game Legend. Two years later he
+            released Spunk &amp; Moxie, a one-button masocore platformer on
+            mobile. Today, he is working on Mossmouth's UFO 50 project and The
+            Indie Game Legend 3D.
+          </p>
+
+          <h2>Team</h2>
+          Jeff Lindsay, programmer and producer
+          <br />
+          Paul Hubans, designer and artist <br />
+          Stevie Hryciw, music
+        </div>
+      </div>
+    </div>
+
     <div class="ui vertical stripe segment" style="text-align: center;">
       Copyright 2019 Progrium Games
     </div>
-    
+
     <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6824126-19"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-6824126-19"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-  gtag('config', 'UA-6824126-19');
-</script>
-
+      gtag('config', 'UA-6824126-19');
+    </script>
   </body>
-  </html>
-  
+</html>
